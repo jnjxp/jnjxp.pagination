@@ -225,6 +225,18 @@ class PageIterator implements Iterator, PageIteratorInterface
     }
 
     /**
+     * Count
+     *
+     * @return int
+     *
+     * @access public
+     */
+    public function count() : int
+    {
+        return $this->totalPages;
+    }
+
+    /**
      * Rewind
      *
      * @return void
