@@ -19,6 +19,8 @@
 
 namespace Jnjxp\Pagination;
 
+use Countable;
+
 /**
  * Pagination Helper
  *
@@ -28,7 +30,7 @@ namespace Jnjxp\Pagination;
  * @license  https://jnj.mit-license.org/ MIT License
  * @link     https://jakejohns.net
  */
-class Helper
+class Helper implements Countable
 {
     /**
      * Total Items
@@ -253,6 +255,18 @@ class Helper
             $this->currentPage,
             $this->neighbors
         );
+    }
+
+    /**
+     * Count
+     *
+     * @return int
+     *
+     * @access public
+     */
+    public function count() : int
+    {
+        return count($this->getPages());
     }
 
     /**
