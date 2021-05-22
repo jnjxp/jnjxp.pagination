@@ -20,6 +20,7 @@
 namespace Jnjxp\Pagination;
 
 use Traversable;
+use Countable;
 
 /**
  * Interface: PageIterator
@@ -30,7 +31,7 @@ use Traversable;
  * @license  http://jnj.mit-license.org/ MIT License
  * @link     http://jakejohns.net
  */
-interface PageIteratorInterface extends Traversable
+interface PageIteratorInterface extends Traversable, Countable
 {
 
     const PAGE_ONE = 1;
